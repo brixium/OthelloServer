@@ -1,0 +1,2 @@
+# OthelloServer
+Server othello
