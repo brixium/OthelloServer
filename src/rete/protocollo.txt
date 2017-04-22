@@ -1,0 +1,10 @@
+Protocollo:
+STRINGA DA INVIARE DEVE AVERE:
+( X,Y,C )
+
+Legenda:
+( = inizio
+) = fine
+X = posizione x
+Y = posizione y
+C = colore
