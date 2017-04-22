@@ -23,12 +23,18 @@ public class OthelloServer {
         }
         */
         String i="";
-        System.out.println("Vuoi essere server o client?");
-        i=br.readLine();
-        if(i.equalsIgnoreCase("server")){
-            new Server();
-        }else if(i.equalsIgnoreCase("client")){
-            new Client();
+        while(true){
+            System.out.println("Vuoi essere server o client?");
+            i=br.readLine();
+            if(i.equalsIgnoreCase("server")){
+                Server s = new Server();
+                System.out.println("Server in avvio...");
+            }else if(i.equalsIgnoreCase("client")){
+                Client c = new Client();
+                System.out.println("Client in avvio...");
+            }else{
+                System.out.println("Hai sbagliato a scrivere");
+            }
         }
     }
 }
