@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rete;
 
 import java.io.*;
 import java.net.*;
-/**
- *
- * @author asolan.lorenzo
- */
 public class Client {
     boolean colo;
     public Client(boolean col) throws IOException {
