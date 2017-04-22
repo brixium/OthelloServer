@@ -12,9 +12,9 @@ import java.net.*;
  * @author asolan.lorenzo
  */
 public class Client {
-
-    public Client() throws IOException {
-
+    boolean colo;
+    public Client(boolean col) throws IOException {
+        this.colo=colo;
         Socket s = new Socket("127.0.0.1", 5555);
         BufferedReader sock_in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter sock_out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);

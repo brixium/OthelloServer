@@ -6,10 +6,25 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 public class OthelloServer {
     private static int contatore;
-    private static boolean  color=false;    //false è nero, true è bianco
+    private static boolean color = false;    //false è nero, true è bianco
     public static void main(String[] args) throws IOException{
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
+        String i="";
+        while(true){
+            System.out.println("Vuoi essere server o client?");
+            i=br.readLine();
+            if(i.equalsIgnoreCase("server")){
+                Server s = new Server();
+                System.out.println("Server in avvio...");
+            }else if(i.equalsIgnoreCase("client")){
+                Client c = new Client(color);
+                System.out.println("Client in avvio...");
+                contatore++;
+            }else{
+                System.out.println("Hai sbagliato a scrivere");
+            }
+        }
         /*
         ServerSocket ss = new ServerSocket(6666);
         while (true) {
@@ -22,19 +37,5 @@ public class OthelloServer {
             contatore++;
         }
         */
-        String i="";
-        while(true){
-            System.out.println("Vuoi essere server o client?");
-            i=br.readLine();
-            if(i.equalsIgnoreCase("server")){
-                Server s = new Server();
-                System.out.println("Server in avvio...");
-            }else if(i.equalsIgnoreCase("client")){
-                Client c = new Client();
-                System.out.println("Client in avvio...");
-            }else{
-                System.out.println("Hai sbagliato a scrivere");
-            }
-        }
     }
 }
