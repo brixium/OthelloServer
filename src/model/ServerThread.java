@@ -6,11 +6,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ServerThread extends Thread {
-
+    boolean color;
     private Socket s;
 
-    public ServerThread(Socket s) {
+    public ServerThread(Socket s, boolean color) {
         this.s = s;
+        this.color=color;
     }
 
     public void run() {
