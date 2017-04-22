@@ -14,4 +14,7 @@ public class Casella {
     public int getY(){
         return y;
     }
+    public Casella getCasella(){
+        return this;
+    }
 }
