@@ -4,6 +4,7 @@ import rete.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
+import java.util.Scanner;
 import model.Campo;
 import view.Console;
 public class OthelloServer {
@@ -13,7 +14,7 @@ public class OthelloServer {
         Campo c= new Campo();
         Console c1= new Console();
         c1.Stampa(c);
-        /*
+        Scanner sc = new Scanner(System.in);
         
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
@@ -21,13 +22,13 @@ public class OthelloServer {
         while(true){
             System.out.println("Vuoi essere server o client?");
             i=br.readLine();
-            if(i.equalsIgnoreCase("server")){ 
+            if(i.equalsIgnoreCase("server")|| i.contains("s")){ 
                 System.out.println("Server in avvio...");
                 Server s = new Server();
-            }else if(i.equalsIgnoreCase("client")){
+            }else if(i.equalsIgnoreCase("client")|| i.contains("c")){
                 System.out.println("Client in avvio...");
                 contatore++;
-                Client c = new Client(color);
+                Client cli = new Client(color);
             }else{
                 System.out.println("Hai sbagliato a scrivere");
             }

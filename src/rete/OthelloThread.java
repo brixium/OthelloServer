@@ -14,13 +14,12 @@ public class OthelloThread extends Thread {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
             PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
-            
+            String esse= in.readLine();
+            boolean b;
             while (true) {
-                String esse = in.readLine();
-                if(CheckSyntax(esse)){
+                if(esse.startsWith("(") && esse.endsWith(")")){
                     out.println(esse);
                 }
-                
             }
         } catch (IOException ex) {
             Logger.getLogger(OthelloThread.class.getName()).log(Level.SEVERE, null, ex);
