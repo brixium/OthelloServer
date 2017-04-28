@@ -4,10 +4,15 @@ import rete.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
+import model.Campo;
+import view.Console;
 public class OthelloServer {
     private static int contatore;
     private static boolean color = false;    //false è nero, true è bianco
     public static void main(String[] args) throws IOException{
+        Campo c= new Campo();
+        Console c1= new Console();
+        c1.Stampa(c);
         /*
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);

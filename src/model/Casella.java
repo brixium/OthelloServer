@@ -3,11 +3,21 @@ package model;
 public class Casella {
     private int x;
     private int y;
-    Pedina pedina;
-    Campo campo;
-    public Casella(int x, int y){
+    private Pedina p;
+    boolean occupata;
+    boolean colore;
+    public Casella(){
+        
+    }
+    public Casella(int x, int y, boolean occupata, boolean colore){
         this.x=x;
         this.y=y;
+        this.occupata=occupata;
+        this.colore=colore;
+        if(occupata){
+            p=new Pedina(colore);
+            
+        }
     }
     public int getX(){
         return x;
@@ -18,15 +28,18 @@ public class Casella {
     public Casella getCasella(){
         return this;
     }
-    public void Occupata(){
-        for(int i=0; i<8; i++){
-            for(int h=0; h<8; h++){
-                if(campo.c[i][h] != null){
-                    System.out.println("#");
-                }else{
-                    System.out.println(" ");        
-                } 
+    public void printCasella(){
+        String occ=null;
+        if(occupata){
+            occ=" ";
+            if(colore){
+                occ="B";
+            }else{
+                occ="N";
             }
+        }else{
+            occ="X";
         }
+        System.out.print("[ "+occ+" ]");
     }
 }
