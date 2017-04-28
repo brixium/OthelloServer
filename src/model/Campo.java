@@ -8,25 +8,20 @@ public class Campo {
             //casella  3-3
                 if(r==3 && c==3 ){
                     cs[r][c] = new Casella(r,c,true,false);  
-                }else{
-                    cs[r][c] = new Casella(r,c,false,false); 
                 }
             //casella 3-4
-                if(r==3 && c==4 ){
-                    cs[r][c] = new Casella(r,c,true,true);  
-                }else{
-                    cs[r][c] = new Casella(r,c,false,false); 
+                else if(r==3 && c==4 ){
+                    cs[r][c] = new Casella(r,c,true,true);
                 }
             //casella 4-3
-                if(r==4 && c==3 ){
+                else if(r==4 && c==3 ){
                     cs[r][c] = new Casella(r,c,true,true);  
-                }else{
-                    cs[r][c] = new Casella(r,c,false,false); 
                 }
             //casella 4-4
-                if(r==4 && c==4 ){
-                    cs[r][c] = new Casella(r,c,true,false);  
-                }else{
+                else if(r==4 && c==4 ){
+                    cs[r][c] = new Casella(r,c,true,true);  
+                }               
+                else{
                     cs[r][c] = new Casella(r,c,false,false); 
                 }
             }
@@ -45,18 +40,6 @@ public class Campo {
         }
     }
     public Casella[][] getCasella(){
-        return c;
+        return cs;
     }
-    
-    //posizione iniziale
-    public void Start(){
-        c[3][3].pedina.setColore(false); //bianco
-        c[3][4].pedina.setColore(true); //nero
-        c[4][3].pedina.setColore(false); //bianco
-        c[4][4].pedina.setColore(true); //nero
-    }
-    
-    
-    
-    
 }
