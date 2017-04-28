@@ -12,11 +12,11 @@ public class OthelloThread extends Thread {
     public void run() {
         
         try {
-            BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
-            PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
-            String esse= in.readLine();
-            boolean b;
             while (true) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
+                PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
+                String esse= in.readLine();
+                boolean b;
                 if(esse.startsWith("(") && esse.endsWith(")")){
                     out.println(esse);
                 }
