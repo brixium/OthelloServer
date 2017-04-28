@@ -12,10 +12,9 @@ import java.net.Socket;
  */
 public class Server {
     public Server() throws IOException {
-
         ServerSocket ss = new ServerSocket(5555);
         while (true) {
-            new EchoThread(ss.accept()).start();
+            new OthelloThread(ss.accept()).start();
         }
     }
 }

@@ -14,24 +14,25 @@ public class OthelloServer {
         Console c1= new Console();
         c1.Stampa(c);
         /*
+        
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
         String i="";
         while(true){
             System.out.println("Vuoi essere server o client?");
             i=br.readLine();
-            if(i.equalsIgnoreCase("server")){
-                Server s = new Server();
+            if(i.equalsIgnoreCase("server")){ 
                 System.out.println("Server in avvio...");
+                Server s = new Server();
             }else if(i.equalsIgnoreCase("client")){
-                Client c = new Client(color);
                 System.out.println("Client in avvio...");
                 contatore++;
+                Client c = new Client(color);
             }else{
                 System.out.println("Hai sbagliato a scrivere");
             }
         }
-        */
+        
         /*
         ServerSocket ss = new ServerSocket(6666);
         while (true) {

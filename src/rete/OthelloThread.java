@@ -16,10 +16,21 @@ public class OthelloThread extends Thread {
             PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
             
             while (true) {
-                out.println(in.readLine());
+                String esse = in.readLine();
+                if(CheckSyntax(esse)){
+                    out.println(esse);
+                }
+                
             }
         } catch (IOException ex) {
             Logger.getLogger(OthelloThread.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public boolean CheckSyntax(String s){
+        if(s.startsWith("(") && s.endsWith(")")){
+            return true;
+        }else{
+            return false;
         }
     }
 }
