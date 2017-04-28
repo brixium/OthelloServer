@@ -19,7 +19,7 @@ public class Campo {
                 }
             //casella 4-4
                 else if(r==4 && c==4 ){
-                    cs[r][c] = new Casella(r,c,true,true);  
+                    cs[r][c] = new Casella(r,c,true,false);  
                 }               
                 else{
                     cs[r][c] = new Casella(r,c,false,false); 
