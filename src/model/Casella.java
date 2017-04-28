@@ -33,13 +33,14 @@ public class Casella {
         if(occupata){
             occ=" ";
             if(colore){
-                occ="B";
-            }else{
                 occ="N";
+            }else{
+                occ="B";
             }
         }else{
-            occ="X";
+            occ="o";
         }
         System.out.print("[ "+occ+" ]");
     }
+    
 }
