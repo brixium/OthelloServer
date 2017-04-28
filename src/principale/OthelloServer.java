@@ -8,6 +8,7 @@ public class OthelloServer {
     private static int contatore;
     private static boolean color = false;    //false è nero, true è bianco
     public static void main(String[] args) throws IOException{
+        /*
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
         String i="";
@@ -25,6 +26,7 @@ public class OthelloServer {
                 System.out.println("Hai sbagliato a scrivere");
             }
         }
+        */
         /*
         ServerSocket ss = new ServerSocket(6666);
         while (true) {
