@@ -4,6 +4,7 @@ STRINGA DA INVIARE DEVE AVERE:
 
 Legenda:
 ( = inizio
+
 ) = fine
 X = posizione x
 Y = posizione y
