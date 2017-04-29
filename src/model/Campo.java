@@ -42,4 +42,19 @@ public class Campo {
     public Casella[][] getCasella(){
         return cs;
     }
+    public boolean possibile(){
+        boolean b=false;
+        for(int i=0;i<8; i++){
+            for(int j=0; j<8; j++){
+                if(cs[i][j].occupata==true){
+                    if(){
+                        
+                    }
+                }else{
+                    System.out.println("No buono");
+                }
+            }
+        }
+        return b;
+    }
 }
