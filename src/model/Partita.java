@@ -2,10 +2,15 @@
 package model;
 public class Partita {
     //dichiarazione del campo
-    Campo campo;
+    private Campo campo;
     //dichiarazione di una proprietà per gestire il turno
     boolean turno;
     //metodo getPartita: utile 
+    boolean finita;
+    public Partita(){
+        finita=false;
+        turno=false;
+    }
     public Partita getPartita(){
         return this;
     }
