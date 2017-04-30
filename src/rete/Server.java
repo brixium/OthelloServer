@@ -12,14 +12,15 @@ import model.Partita;
  * @author asolan.lorenzo
  */
 public class Server {
-    public Server(Partita p) throws IOException {
+    public Server() throws IOException {
+        Partita p = new Partita();
         int conn=0;
        // boolean color=false;
         ServerSocket ss = new ServerSocket(5555);
-        while (true) {
+        while (conn<2) {
             new OthelloThread(ss.accept(),p, conn).start();
             conn++;
-           // color=!color;
         }
+        System.err.println("Numero massimo di connessioni raggiunte (2)");
     }
 }
