@@ -11,8 +11,9 @@ public class Client {
             PrintWriter sock_out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
             BufferedReader std_in = new BufferedReader(new InputStreamReader(System.in));
             PrintWriter std_out = new PrintWriter(new OutputStreamWriter(System.out), true);
+            // esecuzione ciclo semi-infinito di client
             for(int i=0; i!=-1; i++) {
-                System.out.println("");
+                System.out.println("Turno");
                 sock_out.println(std_in.readLine());
                 //std_out.println(sock_in.readLine());
                 System.out.println(sock_in.readLine());
