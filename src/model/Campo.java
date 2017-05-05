@@ -48,7 +48,7 @@ public class Campo {
         for(int riga=0;riga<8; riga++){
             for(int colonna=0; colonna<8; colonna++){
                 
-                if(cs[riga][colonna].occupata){
+                if(cs[riga][colonna].getOccupata()){
                     if(cs[riga][colonna].getPedina().getColore()){
                     }
                 }

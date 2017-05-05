@@ -6,9 +6,9 @@ public class Partita {
     //dichiarazione del campo
     private Campo campo=new Campo();
     //dichiarazione di una proprietà per gestire il turno
-    boolean turno;
+    private boolean turno;
     //metodo getPartita: utile 
-    boolean finita;
+    private boolean finita;
     
     //METODI
     public Partita(){
@@ -25,5 +25,8 @@ public class Partita {
     }
     public Campo getCampo(){
         return campo;
+    }
+    public boolean isFinita(){
+        return finita;
     }
 }

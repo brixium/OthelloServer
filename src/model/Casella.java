@@ -4,8 +4,8 @@ public class Casella {
     private int x;
     private int y;
     private Pedina p;
-    boolean occupata;
-    Campo campo;
+    private boolean occupata;
+    private Campo campo;
     public Casella(){
         
     }
@@ -30,22 +30,27 @@ public class Casella {
     public Pedina getPedina(){
         return p;
     }
-    public void inserimentocasella(int a,int b, boolean z){
+    public Campo getCampo(){
+        return campo;
+    }
+    public boolean getOccupata(){
+        return occupata;
+    }
+    public void inserimentocasella(int a,int b, boolean colore){
         x=a;
         y=b;
         if(campo.cs[x][y]==null){
             campo.cs[x][y].occupata=true;
-            campo.cs[x][y].p.colore=z;
+            campo.cs[x][y].p.setColore(colore);
         }
         
     }
     
     public void printCasella(){
-        /*
         String occ=null;
         if(occupata){
             occ=" ";
-            if(colore){
+            if(p.getColore()){
                 occ="N";
             }else{
                 occ="B";
@@ -54,7 +59,6 @@ public class Casella {
             occ="o";
         }
         System.out.print("[ "+occ+" ]");
-*/
     }
     
 }
