@@ -49,10 +49,34 @@ public class Campo {
             for(int colonna=0; colonna<8; colonna++){
                 
                 if(cs[riga][colonna].occupata){
-                    if(cs[riga][colonna].getPedina().getColore()){
-                    }
-                }
-                        
+                    cs[riga][colonna].getPedina().getColore();
+                    
+                    //controllo alto sx
+                    if(cs[riga-1][colonna-1].occupata && (cs[riga-1][colonna-1].getPedina().colore != cs[riga][colonna].getPedina().colore)){                        
+                        //controllo alto centr
+                        if(cs[riga-1][colonna].occupata && (cs[riga-1][colonna].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                            //controllo alto dx
+                            if(cs[riga-1][colonna+1].occupata && (cs[riga-1][colonna+1].getPedina().colore != cs[riga][colonna+1].getPedina().colore)){
+                                //controllo sx
+                                if(cs[riga][colonna-1].occupata && (cs[riga][colonna-1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                    //controllo dx
+                                    if(cs[riga][colonna+1].occupata && (cs[riga][colonna+1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                        //controllo basso sx
+                                        if(cs[riga+1][colonna-1].occupata && (cs[riga+1][colonna-1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                            //controllo basso centr
+                                            if(cs[riga+1][colonna].occupata && (cs[riga][colonna].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                                //controllo basso dx
+                                                if(cs[riga+1][colonna+1].occupata && (cs[riga][colonna+1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                                    
+                                                } 
+                                            }
+                                        }       
+                                    }                      
+                                }   
+                            }  
+                        }
+                    }                  
+                }          
             }
         }
         return mossa;
