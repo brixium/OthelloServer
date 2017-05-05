@@ -4,5 +4,8 @@ public class Pedina {
     public Pedina(boolean z){
         colore=z;
     }
+    public boolean getColore(){
+        return colore;
+    }
     
 }
