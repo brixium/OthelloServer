@@ -6,47 +6,68 @@ import java.util.logging.Logger;
 import model.Partita;
 
 public class OthelloThread extends Thread {
-    private Socket s;
-    private boolean turno;  
+    private Socket s1;
+    private Socket s2;
+    private boolean turno;
     private Partita p;
     int contatore;
-    public OthelloThread(Socket s, Partita p, int contatore) {
-        this.turno=false;
-        this.p = p;
-        this.s = s;
-        this.contatore=contatore;
+    
+    //oggetti primo client
+    BufferedReader in_1;
+    PrintWriter out_1;
+    //oggetto secondo client
+    BufferedReader in_2;
+    PrintWriter out_2;
+    
+// METODI    
+    public OthelloThread(Socket s1, Socket s2) {
+        try {
+            this.turno=false;
+            this.s1 = s1;
+            this.s2 = s2;
+            contatore=0;
+            p = new Partita();
+            in_1 = new BufferedReader(new InputStreamReader(s1.getInputStream()));
+            out_1 = new PrintWriter(new OutputStreamWriter(s1.getOutputStream()), true);
+            in_2 = new BufferedReader(new InputStreamReader(s2.getInputStream()));
+            out_2 = new PrintWriter(new OutputStreamWriter(s1.getOutputStream()), true);
+        } catch (IOException ex) {
+            Logger.getLogger(OthelloThread.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+    
     public void run(){
-        //oggetti primo client
-        BufferedReader in_1;
-        PrintWriter out_1;
-        //oggetto secondo client
-        BufferedReader in_2;
-        PrintWriter out_2;
         try {
             for(int j=0; true; j++){
-                if(contatore%4==0){
+                if(j==0){
+                    out_1.println("Istruzioni per l'inserimento di una pedina:");
+                    out_2.println("(X , Y) dove X è sostituito dalla posizione sull'asse orizzontale e Y di qeullo verticale");
+                    
+                }
+                else{
+                    if(contatore%4==0){
                     // flusso IN primo client
-                    in_1 = new BufferedReader(new InputStreamReader(s.getInputStream()));
+                    in_1.readLine();
                     contatore++;
                 } else if(contatore%4==1){
                     // flusso OUT secondo client
-                    out_2 = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
-                    out_2.println("Unione ad una partita già creata in corso...");
+                    
+                    out_1.println("Unione ad una partita già creata in corso...");
                     contatore++;
                 } else if(contatore%4==2){
                     // flusso IN secondo client
-                    in_2 = new BufferedReader(new InputStreamReader(s.getInputStream()));
-
+                    
+                    in_2.readLine();
                     contatore++;
                 } else if(contatore%4==3){
                     // flusso OUT secondo client
-                    out_2 = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
+                    out_2 = new PrintWriter(new OutputStreamWriter(s2.getOutputStream()), true);
                     out_2.println("Unione ad una partita già creata in corso...");
                     contatore++;
                 }
-                
                 System.out.println(turno + "; "+contatore);
+            }
+                
             }
         } catch (IOException ex) {
             Logger.getLogger(OthelloThread.class.getName()).log(Level.SEVERE, null, ex);
