@@ -42,19 +42,20 @@ public class Campo {
     public Casella[][] getCasella(){
         return cs;
     }
-    public boolean possibile(){
-        boolean b=false;
-        for(int i=0;i<8; i++){
-            for(int j=0; j<8; j++){
-                if(cs[i][j].occupata==true){
-                    if(true){
-                        
+    public boolean PossibileMossa(){
+        boolean mossa=false;
+        
+        for(int riga=0;riga<8; riga++){
+            for(int colonna=0; colonna<8; colonna++){
+                
+                if(cs[riga][colonna].occupata){
+                    if(cs[riga][colonna].getPedina().getColore()){
                     }
-                }else{
-                    System.out.println("No buono");
                 }
+                        
             }
         }
-        return b;
+        return mossa;
     }
+        
 }
