@@ -24,6 +24,7 @@ public class Client {
                     System.out.println("Colore: "+color);
                 }
                 else{
+                    // fare dire al client la stringa
                     sock_out.println(std_in.readLine());
                     //std_out.println(sock_in.readLine());
                     System.out.println(sock_in.readLine());

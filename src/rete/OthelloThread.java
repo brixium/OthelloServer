@@ -48,7 +48,7 @@ public class OthelloThread extends Thread {
                 else{
                     if(contatore%4==0){
                         // flusso IN primo client
-                        out_1.println("Che cosa vuoi fare? G1");
+                        out_1.println("G1: Che cosa vuoi fare? Contatore: "+contatore);
                         sc_1=in_1.readLine();
                         contatore++;
                     } else if(contatore%4==1){
@@ -58,7 +58,7 @@ public class OthelloThread extends Thread {
                         turno=true;
                     } else if(contatore%4==2){
                         // flusso IN secondo client
-                        out_2.println("Che cosa vuoi fare? G2");
+                        out_2.println("G2: Che cosa vuoi fare? Contatore: "+contatore);
                         sc_2=in_2.readLine();
                         contatore++;
                     } else if(contatore%4==3){
