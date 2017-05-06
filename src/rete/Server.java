@@ -13,7 +13,7 @@ import model.Partita;
  */
 public class Server {
     public Server() throws IOException {
-        Partita p = new Partita();
+        //Partita p = new Partita();
         //int conn=0;
         //boolean color=false;
         ServerSocket ss = new ServerSocket(5555);

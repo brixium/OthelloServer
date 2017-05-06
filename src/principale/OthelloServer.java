@@ -8,15 +8,11 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Campo;
-import view.Console;
+import view.TextInterface;
 public class OthelloServer {
     private static int contatore;
     private static boolean color = false;    //false è nero, true è bianco
     public static void main(String[] args) {
-        Campo c= new Campo();
-        Console c1= new Console();
-        c1.Stampa(c);
-        //Scanner sc = new Scanner(System.in);
         
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
@@ -37,18 +33,5 @@ public class OthelloServer {
         } catch (IOException ex) {
             System.err.println(ex);
         }
-        
-        /*
-        ServerSocket ss = new ServerSocket(6666);
-        while (true) {
-            if(contatore%2==0){
-                color=false;
-            }else{
-                color=true;
-            }
-            new ServerThread(ss.accept(), color).start();
-            contatore++;
-        }
-        */
     }
 }

@@ -27,9 +27,6 @@ public class Campo {
             }
         }
     }
-    public Campo getCampo(){
-        return this;       
-    }
     public void stampaCampo(){
         for(int r=0; r<8; r++){
             for(int co=0; co<8; co++){

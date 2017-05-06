@@ -5,9 +5,8 @@ public class Casella {
     private int y;
     private Pedina p;
     private boolean occupata;
-    private Campo campo;
     public Casella(){
-        
+        occupata=false;
     }
     public Casella(int x, int y, boolean occupata, boolean colore){
         this.x=x;
@@ -30,12 +29,10 @@ public class Casella {
     public Pedina getPedina(){
         return p;
     }
-    public Campo getCampo(){
-        return campo;
-    }
     public boolean getOccupata(){
         return occupata;
     }
+    /*
     public void inserimentocasella(int a,int b, boolean colore){
         x=a;
         y=b;
@@ -45,7 +42,7 @@ public class Casella {
         }
         
     }
-    
+    */
     public void printCasella(){
         String occ=null;
         if(occupata){
