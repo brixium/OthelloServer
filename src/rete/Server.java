@@ -31,7 +31,7 @@ public class Server {
                 s2=ss.accept();
                 System.out.println("Connessione client 2 arrivata; "+conn);
             }
-            System.out.println("Ciclo finito; "+conn);
+            //System.out.println("Ciclo finito; "+conn);
             //conn++;
         }
         //System.err.println("Numero massimo di connessioni raggiunte (2)");

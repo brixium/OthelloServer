@@ -11,7 +11,7 @@ public class OthelloThread extends Thread {
     private Socket s2;
     private boolean turno;
     private Partita p;
-    int contatore;
+    int mossa;
     TextInterface TI;
     
     //oggetti primo client
@@ -29,7 +29,7 @@ public class OthelloThread extends Thread {
             this.turno=false;
             this.s1 = s1;
             this.s2 = s2;
-            contatore=0;
+            mossa=0;
             p = new Partita();
             TI=new TextInterface();
             in_1 = new BufferedReader(new InputStreamReader(s1.getInputStream()));
@@ -40,19 +40,20 @@ public class OthelloThread extends Thread {
             Logger.getLogger(OthelloThread.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    // ATTENZIONE: ANDARE A CAPO SOLAMENTE QUANDO NECESSARIO
     public void run(){
         try {
             for(int j=0; true; j++){
                 if(j==0){
                     out_1.println("false");
                     out_2.println("true");
-                    TI.Stampa(p.getCampo());
+                    //out_1.println("Sei il primo giocatore");
+                    //out_2.println("Sei il secondo giocatore");
                 }
                 else{
                     if(turno==false){
                         // flusso IN primo client
-                        out_1.println("G1: Che cosa vuoi fare? Contatore: "+contatore);
+                        out_1.println("G1: Che cosa vuoi fare? Contatore: "+mossa);
                         sc_1=in_1.readLine();
                         
                         // flusso OUT secondo client
@@ -60,15 +61,17 @@ public class OthelloThread extends Thread {
                         turno=!turno;
                     }else{
                         // flusso IN secondo client
-                        out_2.println("G2: Che cosa vuoi fare? Contatore: "+contatore);
+                        out_2.println("G2: Che cosa vuoi fare? Contatore: "+mossa);
                         sc_2=in_2.readLine();
                         
                         // flusso OUT secondo client
                         //out_2.println("Sei il secondo giocatore");
                         turno=!turno;
+                        //System.out.println(":"+mossa/2+";");
                     }
-                    contatore++;
-                    System.out.println(turno + "; "+contatore);
+                    mossa++;
+                    System.out.println(turno + "; "+mossa);
+                    TI.Stampa(p.getCampo());
                 }
             }
         } catch (IOException ex) {
@@ -83,8 +86,8 @@ public class OthelloThread extends Thread {
             return false;
         }
     }
-    public int getStatus(){
-        return contatore;
+    public int getMossa(){
+        return mossa;
     }
     public boolean getTurno(){
         return turno;
