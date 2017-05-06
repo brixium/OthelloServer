@@ -13,11 +13,21 @@ public class Client {
             PrintWriter std_out = new PrintWriter(new OutputStreamWriter(System.out), true);
             // esecuzione ciclo semi-infinito di client
             for(int i=0; i!=-1; i++) {
-                System.out.println("Turno");
-                sock_out.println(std_in.readLine());
-                //std_out.println(sock_in.readLine());
-                System.out.println(sock_in.readLine());
-                
+                if(i==0){
+                    String ds =sock_in.readLine();
+                    if(ds.equalsIgnoreCase("true")){
+                        color=true;
+                    }else{
+                        color=false;
+                    }
+                    System.out.println(ds);
+                    System.out.println("Colore: "+color);
+                }
+                else{
+                    sock_out.println(std_in.readLine());
+                    //std_out.println(sock_in.readLine());
+                    System.out.println(sock_in.readLine());
+                }
             }
         }catch(java.net.SocketException e){
             System.err.println(e);

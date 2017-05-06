@@ -15,9 +15,11 @@ public class OthelloThread extends Thread {
     //oggetti primo client
     BufferedReader in_1;
     PrintWriter out_1;
+    String sc_1;
     //oggetto secondo client
     BufferedReader in_2;
     PrintWriter out_2;
+    String sc_2;
     
 // METODI    
     public OthelloThread(Socket s1, Socket s2) {
@@ -30,7 +32,7 @@ public class OthelloThread extends Thread {
             in_1 = new BufferedReader(new InputStreamReader(s1.getInputStream()));
             out_1 = new PrintWriter(new OutputStreamWriter(s1.getOutputStream()), true);
             in_2 = new BufferedReader(new InputStreamReader(s2.getInputStream()));
-            out_2 = new PrintWriter(new OutputStreamWriter(s1.getOutputStream()), true);
+            out_2 = new PrintWriter(new OutputStreamWriter(s2.getOutputStream()), true);
         } catch (IOException ex) {
             Logger.getLogger(OthelloThread.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -40,27 +42,28 @@ public class OthelloThread extends Thread {
         try {
             for(int j=0; true; j++){
                 if(j==0){
-                    out_1.println("Istruzioni per l'inserimento di una pedina:\n(X , Y) dove X è sostituito dalla posizione sull'asse orizzontale e Y di qeullo verticale");
+                    out_1.println("false");
+                    out_2.println("true");
                 }
                 else{
                     if(contatore%4==0){
                         // flusso IN primo client
-                        out_1.println("Che cosa vuoi fare?");
-                        in_1.readLine();
+                        out_1.println("Che cosa vuoi fare? G1");
+                        sc_1=in_1.readLine();
                         contatore++;
                     } else if(contatore%4==1){
                         // flusso OUT secondo client
-                        out_1.println("Sei il primo giocatore");
+                        //out_1.println("Sei il primo giocatore");
                         contatore++;
                         turno=true;
                     } else if(contatore%4==2){
                         // flusso IN secondo client
-                        out_2.println("Che cosa vuoi fare?");
-                        in_2.readLine();
+                        out_2.println("Che cosa vuoi fare? G2");
+                        sc_2=in_2.readLine();
                         contatore++;
                     } else if(contatore%4==3){
                         // flusso OUT secondo client
-                        out_2.println("Sei il secondo giocatore");
+                        //out_2.println("Sei il secondo giocatore");
                         contatore++;
                         turno=false;
                     }
@@ -81,5 +84,8 @@ public class OthelloThread extends Thread {
     }
     public int getStatus(){
         return contatore;
+    }
+    public boolean getTurno(){
+        return turno;
     }
 }
