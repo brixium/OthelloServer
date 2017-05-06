@@ -48,25 +48,25 @@ public class Campo {
         for(int riga=0;riga<8; riga++){
             for(int colonna=0; colonna<8; colonna++){
                 
-                if(cs[riga][colonna].occupata){
+                if(cs[riga][colonna].getOccupata()){
                     cs[riga][colonna].getPedina().getColore();
                     
                     //controllo alto sx
-                    if(cs[riga-1][colonna-1].occupata && (cs[riga-1][colonna-1].getPedina().colore != cs[riga][colonna].getPedina().colore)){                        
+                    if(cs[riga-1][colonna-1].getOccupata() && (cs[riga-1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){                        
                         //controllo alto centr
-                        if(cs[riga-1][colonna].occupata && (cs[riga-1][colonna].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                        if(cs[riga-1][colonna].getOccupata() && (cs[riga-1][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                             //controllo alto dx
-                            if(cs[riga-1][colonna+1].occupata && (cs[riga-1][colonna+1].getPedina().colore != cs[riga][colonna+1].getPedina().colore)){
+                            if(cs[riga-1][colonna+1].getOccupata() && (cs[riga-1][colonna+1].getPedina().getColore() != cs[riga][colonna+1].getPedina().getColore())){
                                 //controllo sx
-                                if(cs[riga][colonna-1].occupata && (cs[riga][colonna-1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                if(cs[riga][colonna-1].getOccupata() && (cs[riga][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                     //controllo dx
-                                    if(cs[riga][colonna+1].occupata && (cs[riga][colonna+1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                    if(cs[riga][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                         //controllo basso sx
-                                        if(cs[riga+1][colonna-1].occupata && (cs[riga+1][colonna-1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                        if(cs[riga+1][colonna-1].getOccupata() && (cs[riga+1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                             //controllo basso centr
-                                            if(cs[riga+1][colonna].occupata && (cs[riga][colonna].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                            if(cs[riga+1][colonna].getOccupata() && (cs[riga][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                                 //controllo basso dx
-                                                if(cs[riga+1][colonna+1].occupata && (cs[riga][colonna+1].getPedina().colore != cs[riga][colonna].getPedina().colore)){
+                                                if(cs[riga+1][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                                     
                                                 } 
                                             }
@@ -77,9 +77,13 @@ public class Campo {
                         }
                     }                  
                 }          
+                if(cs[riga][colonna].getOccupata()){ 
+                    if(cs[riga][colonna].getPedina().getColore()){
+                    }
+                }
+                        
             }
         }
         return mossa;
-    }
-        
+    }       
 }
