@@ -49,6 +49,35 @@ public class Campo {
             for(int colonna=0; colonna<8; colonna++){
                 
                 if(cs[riga][colonna].getOccupata()){
+                    cs[riga][colonna].getPedina().getColore();
+                    
+                    //controllo alto sx
+                    if(cs[riga-1][colonna-1].getOccupata() && (cs[riga-1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){                        
+                        //controllo alto centr
+                        if(cs[riga-1][colonna].getOccupata() && (cs[riga-1][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
+                            //controllo alto dx
+                            if(cs[riga-1][colonna+1].getOccupata() && (cs[riga-1][colonna+1].getPedina().getColore() != cs[riga][colonna+1].getPedina().getColore())){
+                                //controllo sx
+                                if(cs[riga][colonna-1].getOccupata() && (cs[riga][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
+                                    //controllo dx
+                                    if(cs[riga][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
+                                        //controllo basso sx
+                                        if(cs[riga+1][colonna-1].getOccupata() && (cs[riga+1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
+                                            //controllo basso centr
+                                            if(cs[riga+1][colonna].getOccupata() && (cs[riga][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
+                                                //controllo basso dx
+                                                if(cs[riga+1][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
+                                                    
+                                                } 
+                                            }
+                                        }       
+                                    }                      
+                                }   
+                            }  
+                        }
+                    }                  
+                }          
+                if(cs[riga][colonna].getOccupata()){ 
                     if(cs[riga][colonna].getPedina().getColore()){
                     }
                 }
@@ -56,6 +85,5 @@ public class Campo {
             }
         }
         return mossa;
-    }
-        
+    }       
 }
