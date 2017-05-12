@@ -53,6 +53,7 @@ public class OthelloThread extends Thread {
                     //out_2.println("Sei il secondo giocatore");
                 }
                 else{
+                    System.out.println("Esecuzione nr. "+mossa);
                     if(turno==false){
                         // flusso IN primo client
                         out_1.println("G1: Che cosa vuoi fare? Contatore: "+mossa);
@@ -107,6 +108,7 @@ public class OthelloThread extends Thread {
                     mossa++;
                     System.out.println(turno + "; "+mossa);
                     TI.Stampa(p.getCampo());
+                    System.out.println("Dopo si blocca");
                 }
             }
         } catch (IOException ex) {
