@@ -47,6 +47,8 @@ public class OthelloThread extends Thread {
                 if(j==0){
                     out_1.println("false");
                     out_2.println("true");
+                    //out_1.println(p);
+                    //out_2.println(p);
                     //out_1.println("Sei il primo giocatore");
                     //out_2.println("Sei il secondo giocatore");
                 }
@@ -55,7 +57,23 @@ public class OthelloThread extends Thread {
                         // flusso IN primo client
                         out_1.println("G1: Che cosa vuoi fare? Contatore: "+mossa);
                         sc_1=in_1.readLine();
-                        
+                        sc_1=sc_1.trim();
+                        String xS="", yS="";
+                        if(CheckSyntax(sc_1)){
+                            sc_1=sc_1.substring(1, 4);
+                            System.out.println(sc_1);
+                            String [] pos=sc_1.split(",");
+                            
+                            for(int i=0; i<pos.length; i++){
+                                xS=pos[0];
+                                yS=pos[1];
+                                System.out.println(pos[i]);
+                            }
+                        }
+                        int x=Integer.parseInt(xS);
+                        int y=Integer.parseInt(yS);
+                        p.getCampo().setCasella(x, y, turno);
+                        //p.getCampo().
                         // flusso OUT secondo client
                         //out_1.println("Sei il primo giocatore");
                         turno=!turno;
@@ -66,6 +84,23 @@ public class OthelloThread extends Thread {
                         
                         // flusso OUT secondo client
                         //out_2.println("Sei il secondo giocatore");
+                        sc_1=in_1.readLine();
+                        sc_1=sc_1.trim();
+                        String xS="", yS="";
+                        if(CheckSyntax(sc_1)){
+                            sc_1=sc_1.substring(1, 1);
+                            String [] pos=sc_1.split(",");
+                            
+                            for(int i=0; i<pos.length; i++){
+                                xS=pos[0];
+                                yS=pos[1];
+                                System.out.println(pos[i]);
+                            }
+                        }
+                        int x=Integer.parseInt(xS);
+                        int y=Integer.parseInt(yS);
+                        p.getCampo().setCasella(x, y, turno);
+                        
                         turno=!turno;
                         //System.out.println(":"+mossa/2+";");
                     }
