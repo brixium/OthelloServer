@@ -54,7 +54,6 @@ public class OthelloThread extends Thread {
                 }
                 else{
                     try{
-                        System.out.println("Esecuzione nr. "+mossa);
                         if(turno==false){
                         // flusso IN primo client
                         out_1.println("G1: Che cosa vuoi fare? Contatore: "+mossa);
@@ -63,12 +62,12 @@ public class OthelloThread extends Thread {
                         String xS="", yS="";
                         if(CheckSyntax(sc_1)){
                             sc_1=sc_1.substring(1, 4);
-                            System.out.println(sc_1);
+                            System.out.println("Mossa: "+sc_1);
                             String [] pos=sc_1.split(",");
                             for(int i=0; i<pos.length; i++){
                                 xS=pos[0];
                                 yS=pos[1];
-                                System.out.println(pos[i]);
+                                //System.out.println(pos[i]);
                             }
                         }
                         int x=Integer.parseInt(xS);
@@ -84,13 +83,13 @@ public class OthelloThread extends Thread {
                             String xS="", yS="";
                             if(CheckSyntax(sc_2)){
                                 sc_2=sc_2.substring(1, 4);
-                                System.out.println(sc_2);
+                                System.out.println("Mossa: "+sc_2);
                                 String [] pos=sc_2.split(",");
 
                                 for(int i=0; i<pos.length; i++){
                                     xS=pos[0];
                                     yS=pos[1];
-                                    System.out.println(pos[i]);
+                                    //System.out.println(pos[i]);
                                 }
                             }
                             int x=Integer.parseInt(xS);
@@ -102,7 +101,6 @@ public class OthelloThread extends Thread {
                         mossa++;
                         System.out.println(turno + "; "+mossa);
                         TI.Stampa(p.getCampo());
-                        System.out.println("Dopo si blocca");
                     }catch(java.lang.NumberFormatException e){
                         System.err.println(e);
                     }catch(java.lang.StringIndexOutOfBoundsException ex){
