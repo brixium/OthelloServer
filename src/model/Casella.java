@@ -14,7 +14,6 @@ public class Casella {
         this.occupata=occupata;
         if(occupata){
             p=new Pedina(colore);
-            
         }
     }
     public int getX(){
@@ -23,11 +22,16 @@ public class Casella {
     public int getY(){
         return y;
     }
-    public Casella getCasella(){
-        return this;
-    }
     public Pedina getPedina(){
         return p;
+    }
+    public void setPedina(int x, int y, boolean occupata, boolean colore){
+        this.x=x;
+        this.y=y;
+        this.occupata=occupata;
+        if(occupata){
+            p=new Pedina(colore);
+        }
     }
     public boolean getOccupata(){
         return occupata;
@@ -57,5 +61,4 @@ public class Casella {
         }
         System.out.print("[ "+occ+" ]");
     }
-    
 }

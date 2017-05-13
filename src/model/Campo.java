@@ -39,6 +39,17 @@ public class Campo {
     public Casella[][] getCasella(){
         return cs;
     }
+    public void setCasella(int x, int y, boolean color){
+        for(int i=0; i<8; i++){
+            for(int j=0; j<8; j++){
+                System.out.println("["+cs[i][j].getPedina()+"]");
+            }
+            System.out.println();
+        }
+        System.out.println(x+" "+y);
+        System.out.println(cs[x][y]);
+        cs[x][y].setPedina(x, y, true, color); // genera eccezione
+    }
     public boolean PossibileMossa(){
         boolean mossa=false;
         
@@ -82,5 +93,5 @@ public class Campo {
             }
         }
         return mossa;
-    }       
+    }
 }
