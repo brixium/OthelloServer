@@ -492,7 +492,10 @@ public class GUI extends javax.swing.JFrame {
         int clicco = evt.getClickCount();
         System.out.println(clicco);
         if(clicco==1){
-             jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/black.gif")));
+             jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/nero.png")));
+        }
+        if(clicco==2){
+             jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bianco.png")));
         }
     }//GEN-LAST:event_jButton32MouseClicked
 
