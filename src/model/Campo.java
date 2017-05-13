@@ -48,7 +48,7 @@ public class Campo {
         }
         System.out.println(x+" "+y);
         System.out.println(cs[x][y]);
-        cs[x][y].getPedina().setColore(color); // genera eccezione
+        cs[x][y].setPedina(x, y, true, color); // genera eccezione
     }
     public boolean PossibileMossa(){
         boolean mossa=false;

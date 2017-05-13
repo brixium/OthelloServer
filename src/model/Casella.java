@@ -25,6 +25,14 @@ public class Casella {
     public Pedina getPedina(){
         return p;
     }
+    public void setPedina(int x, int y, boolean occupata, boolean colore){
+        this.x=x;
+        this.y=y;
+        this.occupata=occupata;
+        if(occupata){
+            p=new Pedina(colore);
+        }
+    }
     public boolean getOccupata(){
         return occupata;
     }
