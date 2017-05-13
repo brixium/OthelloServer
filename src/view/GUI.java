@@ -98,7 +98,67 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/white.gif"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bianco.png"))); // NOI18N
         jButton32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton32MouseClicked(evt);
@@ -110,11 +170,71 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/black.gif"))); // NOI18N
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
-        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/black.gif"))); // NOI18N
+        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
-        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/white.gif"))); // NOI18N
+        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/nero.png"))); // NOI18N
+
+        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/nero.png"))); // NOI18N
+
+        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bianco.png"))); // NOI18N
+
+        jButton48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+
+        jButton65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
