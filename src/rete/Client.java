@@ -4,8 +4,11 @@ import java.io.*;
 import java.net.*;
 public class Client {
     boolean color;
+    Partita p;
+    String fromserver;
     public Client() throws IOException {
         try{
+            p=new Partita();
             Socket s = new Socket("127.0.0.1", 5555);
             BufferedReader sock_in = new BufferedReader(new InputStreamReader(s.getInputStream()));
             PrintWriter sock_out = new PrintWriter(new OutputStreamWriter(s.getOutputStream()), true);
@@ -29,6 +32,7 @@ public class Client {
                     // fare dire al client la stringa
                     System.out.println("Fai la tua mossa!");
                     sock_out.println(std_in.readLine());
+                    
                     System.out.println("In attesa che il tuo avversario faccia una mossa...");
                     //std_out.println(sock_in.readLine());
                     System.out.println(sock_in.readLine());

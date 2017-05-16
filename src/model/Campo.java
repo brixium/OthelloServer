@@ -97,3 +97,7 @@ public class Campo {
         return mossa;
     }
 }
+
+/*prublic void possibile mossa(){
+    
+}*/
