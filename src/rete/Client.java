@@ -17,7 +17,7 @@ public class Client {
             PrintWriter std_out = new PrintWriter(new OutputStreamWriter(System.out), true);
             // esecuzione ciclo semi-infinito di client
             System.out.println(sock_in.readLine());
-            
+            // -J-Xmx2048m
             for(int i=0; i!=-1; i++) {
                 if(i==0){
                     String ds =sock_in.readLine();
@@ -30,6 +30,7 @@ public class Client {
                     System.out.println("Colore: "+color);
                 }
                 else{
+                    //p.
                     // fare dire al client la stringa
                     System.out.println("Fai la tua mossa!");
                     sock_out.println(std_in.readLine());
