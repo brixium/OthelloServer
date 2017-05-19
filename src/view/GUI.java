@@ -235,6 +235,11 @@ public class GUI extends javax.swing.JFrame {
         jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
         jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton19MouseClicked(evt);
+            }
+        });
 
         jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -252,6 +257,11 @@ public class GUI extends javax.swing.JFrame {
         jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
         jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton25MouseClicked(evt);
+            }
+        });
 
         jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
         jButton26.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -275,10 +285,25 @@ public class GUI extends javax.swing.JFrame {
         });
 
         jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton29MouseClicked(evt);
+            }
+        });
 
         jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton30MouseClicked(evt);
+            }
+        });
 
         jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton31MouseClicked(evt);
+            }
+        });
 
         jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/bianco.png"))); // NOI18N
         jButton32.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -303,8 +328,23 @@ public class GUI extends javax.swing.JFrame {
         jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
         jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton38MouseClicked(evt);
+            }
+        });
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
 
         jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
+        jButton39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton39MouseClicked(evt);
+            }
+        });
 
         jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Green_square.svg.png"))); // NOI18N
 
@@ -702,12 +742,44 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16MouseClicked
 
     private void jButton26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton26MouseClicked
-        // TODO add your handling code here:
+        cli.Inserimento("(2,0)");
     }//GEN-LAST:event_jButton26MouseClicked
 
     private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
-        // TODO add your handling code here:
+        cli.Inserimento("(2,1)");
     }//GEN-LAST:event_jButton20MouseClicked
+
+    private void jButton31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton31MouseClicked
+        cli.Inserimento("(2,2)");
+    }//GEN-LAST:event_jButton31MouseClicked
+
+    private void jButton29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton29MouseClicked
+        cli.Inserimento("(2,5)");
+    }//GEN-LAST:event_jButton29MouseClicked
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton38MouseClicked
+        cli.Inserimento("(2,6)");
+    }//GEN-LAST:event_jButton38MouseClicked
+
+    private void jButton39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton39MouseClicked
+        cli.Inserimento("(2,7)");
+    }//GEN-LAST:event_jButton39MouseClicked
+
+    private void jButton25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MouseClicked
+        cli.Inserimento("(3,0)");
+    }//GEN-LAST:event_jButton25MouseClicked
+
+    private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
+       cli.Inserimento("(3,1)");
+    }//GEN-LAST:event_jButton19MouseClicked
+
+    private void jButton30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton30MouseClicked
+        cli.Inserimento("(3,2)");
+    }//GEN-LAST:event_jButton30MouseClicked
 
     /**
      * @param args the command line arguments

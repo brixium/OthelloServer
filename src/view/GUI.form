@@ -478,6 +478,9 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton19MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton20">
           <Properties>
@@ -523,6 +526,9 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton25MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton26">
           <Properties>
@@ -560,6 +566,9 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton29MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton30">
           <Properties>
@@ -567,6 +576,9 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton30MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton31">
           <Properties>
@@ -574,6 +586,9 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton31MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton32">
           <Properties>
@@ -627,6 +642,10 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton38MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton38ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton39">
           <Properties>
@@ -634,6 +653,9 @@
               <Image iconType="3" name="/view/Green_square.svg.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton39MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton40">
           <Properties>
