@@ -4,8 +4,8 @@ import java.io.*;
 import java.net.*;
 public class Client {
     boolean color;
-    String a;
     Partita p;
+    String a;
     String fromserver;
     public Client() throws IOException {
         try{
@@ -45,7 +45,6 @@ public class Client {
     }
         public void Inserimento(String a){
             a=this.a;
-            
          
     }
 }
