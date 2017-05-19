@@ -64,20 +64,27 @@ public class Campo {
                     //controllo alto sx
                     if(cs[riga-1][colonna-1].getOccupata() && (cs[riga-1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){                        
                         //controllo alto centr
+                        mossa=true;
                         if(cs[riga-1][colonna].getOccupata() && (cs[riga-1][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                             //controllo alto dx
+                            mossa=true;
                             if(cs[riga-1][colonna+1].getOccupata() && (cs[riga-1][colonna+1].getPedina().getColore() != cs[riga][colonna+1].getPedina().getColore())){
                                 //controllo sx
+                                mossa=true;
                                 if(cs[riga][colonna-1].getOccupata() && (cs[riga][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                     //controllo dx
+                                    mossa=true;
                                     if(cs[riga][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                         //controllo basso sx
+                                        mossa=true;
                                         if(cs[riga+1][colonna-1].getOccupata() && (cs[riga+1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                             //controllo basso centr
+                                            mossa=true;
                                             if(cs[riga+1][colonna].getOccupata() && (cs[riga][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
                                                 //controllo basso dx
+                                                mossa=true;
                                                 if(cs[riga+1][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                                                    
+                                                    mossa=true;
                                                 } 
                                             }
                                         }       
@@ -89,6 +96,7 @@ public class Campo {
                 }          
                 if(cs[riga][colonna].getOccupata()){ 
                     if(cs[riga][colonna].getPedina().getColore()){
+                        
                     }
                 }
                         
