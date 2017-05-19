@@ -23,7 +23,12 @@ public class OthelloThread extends Thread {
     PrintWriter out_2;
     String sc_2;
     
-// METODI    
+// METODI
+    /**
+     * Costruttore che inizializza la connessione tra socket, creando 4 flussi: due in entrata e due in uscita
+     * @param s1 Socket associato al primo client
+     * @param s2 Socket associato al secondo client
+     */
     public OthelloThread(Socket s1, Socket s2) {
         try {
             this.turno=false;
@@ -41,6 +46,10 @@ public class OthelloThread extends Thread {
         }
     }
     // ATTENZIONE: ANDARE A CAPO SOLAMENTE QUANDO NECESSARIO
+    
+    /**
+     * Routine del server
+     */
     public void run(){
         try {
             for(int j=0; true; j++){
@@ -94,7 +103,10 @@ public class OthelloThread extends Thread {
                             }
                             int x=Integer.parseInt(xS);
                             int y=Integer.parseInt(yS);
-                            p.getCampo().setCasella(x, y, turno);
+                            if(p.getCampo().PossibileMossa()){
+                                p.getCampo().setCasella(x, y, turno);
+                            }
+                            
                             turno=!turno;
                             //System.out.println(":"+mossa/2+";");
                         }
@@ -115,6 +127,11 @@ public class OthelloThread extends Thread {
         }
         System.out.println("");
     }
+    /**
+     * Data una stringa, controlla se la sintassi è corretta oppure no
+     * @param s stringa su cui eseguire il controllo
+     * @return true se la sintassi è corretta, false se è sbagliata
+     */
     public boolean CheckSyntax(String s){
         if(s.startsWith("(") && s.endsWith(")")){
             return true;
@@ -122,6 +139,10 @@ public class OthelloThread extends Thread {
             return false;
         }
     }
+    /**
+     * Restituisce il numero di turni eseguiti
+     * @return 
+     */
     public int getMossa(){
         return mossa;
     }
