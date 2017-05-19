@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.*;
 public class Client {
     boolean color;
+    String a;
     Partita p;
     String fromserver;
     public Client() throws IOException {
@@ -41,5 +42,10 @@ public class Client {
         }catch(java.net.SocketException e){
             System.err.println(e);
         }
+    }
+        public void Inserimento(String a){
+            a=this.a;
+            
+         
     }
 }
