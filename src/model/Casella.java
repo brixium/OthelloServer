@@ -1,5 +1,9 @@
 package model;
-
+/**
+ * Classe per la casella
+ * essa ha coordinate x, y, una pedina e se è occupata
+ * @author asolan.lorenzo
+ */
 public class Casella {
     private int x;
     private int y;

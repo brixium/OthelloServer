@@ -141,11 +141,15 @@ public class OthelloThread extends Thread {
     }
     /**
      * Restituisce il numero di turni eseguiti
-     * @return 
+     * @return mossa: int
      */
     public int getMossa(){
         return mossa;
     }
+    /**
+     * restutisce il turno 
+     * @return true se è nero, false se è bianco
+     */
     public boolean getTurno(){
         return turno;
     }

@@ -9,6 +9,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Campo;
 import view.TextInterface;
+/**
+ * Classe principale per l'avvio del programma
+ * @author asolan.lorenzo
+ */
 public class OthelloServer {
     private static int contatore;
     private static boolean color = false;    //false è nero, true è bianco
