@@ -80,8 +80,10 @@ public class OthelloThread extends Thread {
                             }
                         }
                         int x=Integer.parseInt(xS);
-                        int y=Integer.parseInt(yS);
-                        p.getCampo().setCasella(x, y, turno);
+                            int y=Integer.parseInt(yS);
+                            if(p.getCampo().PossibileMossa(x,y, true)){
+                                p.getCampo().setCasella(x, y, turno);
+                            }
                         turno=!turno;
                         }else{
                             // flusso IN secondo client
@@ -103,7 +105,7 @@ public class OthelloThread extends Thread {
                             }
                             int x=Integer.parseInt(xS);
                             int y=Integer.parseInt(yS);
-                            if(p.getCampo().PossibileMossa()){
+                            if(p.getCampo().PossibileMossa(x,y, false)){
                                 p.getCampo().setCasella(x, y, turno);
                             }
                             
