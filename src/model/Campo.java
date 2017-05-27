@@ -52,60 +52,61 @@ public class Campo {
         System.out.println(cs[x][y]);
         cs[x][y].setPedina(x, y, true, color); // genera eccezione
     }
-    public boolean PossibileMossa(){
-        boolean mossa=false;
+    public boolean PossibileMossa(int r, int c, boolean col){
+        boolean mossa=false; 
         
         for(int riga=0;riga<8; riga++){
             for(int colonna=0; colonna<8; colonna++){
                 
-                if(cs[riga][colonna].getOccupata()){
-                    cs[riga][colonna].getPedina().getColore();
-                    
-                    //controllo alto sx
-                    if(cs[riga-1][colonna-1].getOccupata() && (cs[riga-1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){                        
-                        //controllo alto centr
-                        mossa=true;
-                        if(cs[riga-1][colonna].getOccupata() && (cs[riga-1][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                            //controllo alto dx
-                            mossa=true;
-                            if(cs[riga-1][colonna+1].getOccupata() && (cs[riga-1][colonna+1].getPedina().getColore() != cs[riga][colonna+1].getPedina().getColore())){
-                                //controllo sx
-                                mossa=true;
-                                if(cs[riga][colonna-1].getOccupata() && (cs[riga][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                                    //controllo dx
-                                    mossa=true;
-                                    if(cs[riga][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                                        //controllo basso sx
-                                        mossa=true;
-                                        if(cs[riga+1][colonna-1].getOccupata() && (cs[riga+1][colonna-1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                                            //controllo basso centr
-                                            mossa=true;
-                                            if(cs[riga+1][colonna].getOccupata() && (cs[riga][colonna].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                                                //controllo basso dx
-                                                mossa=true;
-                                                if(cs[riga+1][colonna+1].getOccupata() && (cs[riga][colonna+1].getPedina().getColore() != cs[riga][colonna].getPedina().getColore())){
-                                                    mossa=true;
-                                                } 
-                                            }
-                                        }       
-                                    }                      
-                                }   
-                            }  
-                        }
-                    }                  
-                }          
-                if(cs[riga][colonna].getOccupata()){ 
-                    if(cs[riga][colonna].getPedina().getColore()){
-                        
+                    //CONTROLLO IN BASSO A DESTRA
+                    if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga][colonna].getPedina().getColore() != cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getOccupata()==false){
+                        mossa = true;
+                        if(riga+2 == r && colonna+2 == c)
+                            cs[riga+2][colonna+2].setPedina(r, c, true, col);
+                        else
+                            System.out.println("mossa non disponibile");
                     }
-                }
-                        
+                    if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga+2][colonna+2].getOccupata() && cs[riga][colonna].getPedina().getColore() != (cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getPedina().getColore())  && cs[riga+3][colonna+3].getOccupata()==false){
+                        mossa = true;
+                        if(riga+3 == r && colonna+3 == c)
+                            cs[riga+3][colonna+3].setPedina(r, c, true, col);
+                        else
+                            System.out.println("mossa non disponibile");
+                    }
+                    if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga+2][colonna+2].getOccupata() && cs[riga+3][colonna+3].getOccupata() && cs[riga][colonna].getPedina().getColore() != (cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getPedina().getColore() && cs[riga+3][colonna+3].getPedina().getColore()) && cs[riga+4][colonna+4].getOccupata()==false){
+                        mossa = true;
+                        if(riga+4 == r && colonna+4 == c)
+                            cs[riga+4][colonna+4].setPedina(r, c, true, col);
+                        else
+                            System.out.println("mossa non disponibile");
+                    }
+                    if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga+2][colonna+2].getOccupata() && cs[riga+3][colonna+3].getOccupata() && cs[riga+4][colonna+4].getOccupata() && cs[riga][colonna].getPedina().getColore() != (cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getPedina().getColore() && cs[riga+3][colonna+3].getPedina().getColore() && cs[riga+4][colonna+4].getPedina().getColore()) && cs[riga+5][colonna+5].getOccupata()==false){
+                        mossa = true;
+                        if(riga+5 == r && colonna+5 == c)
+                            cs[riga+5][colonna+5].setPedina(r, c, true, col);
+                        else
+                            System.out.println("mossa non disponibile");
+                    }
+                    if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga+2][colonna+2].getOccupata() && cs[riga+3][colonna+3].getOccupata() && cs[riga+4][colonna+4].getOccupata() && cs[riga+5][colonna+5].getOccupata() && cs[riga][colonna].getPedina().getColore() != (cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getPedina().getColore() && cs[riga+3][colonna+3].getPedina().getColore() && cs[riga+4][colonna+4].getPedina().getColore() && cs[riga+5][colonna+5].getPedina().getColore()) && cs[riga+6][colonna+6].getOccupata()==false){
+                        mossa = true;
+                        if(riga+6 == r && colonna+6 == c)
+                            cs[riga+6][colonna+6].setPedina(r, c, true, col);
+                        else
+                            System.out.println("mossa non disponibile");
+                    }
+                    if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga+2][colonna+2].getOccupata() && cs[riga+3][colonna+3].getOccupata() && cs[riga+4][colonna+4].getOccupata() && cs[riga+5][colonna+5].getOccupata() && cs[riga+6][colonna+6].getOccupata() && cs[riga][colonna].getPedina().getColore() != (cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getPedina().getColore() && cs[riga+3][colonna+3].getPedina().getColore() && cs[riga+4][colonna+4].getPedina().getColore() && cs[riga+5][colonna+5].getPedina().getColore() && cs[riga+6][colonna+6].getPedina().getColore()) && cs[riga+7][colonna+7].getOccupata()==false){
+                        mossa = true;
+                        if(riga+7 == r && colonna+7 == c)
+                            cs[riga+7][colonna+7].setPedina(r, c, true, col);
+                        else
+                            System.out.println("mossa non disponibile");
+                    }                       
+                    //FINE CONTROLLO 
+                    
+               
             }
         }
-        return mossa;
+    return mossa; 
     }
 }
-
-/*prublic void possibile mossa(){
-    
-}*/
+            
