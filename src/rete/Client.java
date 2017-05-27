@@ -7,6 +7,11 @@ public class Client {
     Partita p;
     String a;
     String fromserver;
+    /**
+     * Costruttore: crea client per giocare
+     * All'interno c'è un ciclo infinito per l'inserimento delle mosse e la ricezone dal server
+     * @throws IOException 
+     */
     public Client() throws IOException {
         try{
             p=new Partita();
@@ -33,19 +38,24 @@ public class Client {
                     //p.
                     // fare dire al client la stringa
                     System.out.println("Fai la tua mossa!");
-                    sock_out.println(std_in.readLine());
+                    a=std_in.readLine();
+                    sock_out.println(a);    // Manda al server quello che legge
                     
                     System.out.println("In attesa che il tuo avversario faccia una mossa...");
                     //std_out.println(sock_in.readLine());
-                    System.out.println(sock_in.readLine());
+                    a=sock_in.readLine();
+                    System.out.println(a); // Printa quello che legge
                 }
             }
         }catch(java.net.SocketException e){
             System.err.println(e);
         }
     }
-        public void Inserimento(String a){
-            a=this.a;
-         
+    /**
+     * Inserimento di una stringa all'interno del client
+     * @param a 
+     */
+    public void Inserimento(String a){
+        a=this.a;     
     }
 }
