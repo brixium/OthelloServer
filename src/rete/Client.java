@@ -12,7 +12,17 @@ public class Client {
      * All'interno c'è un ciclo infinito per l'inserimento delle mosse e la ricezone dal server
      * @throws IOException 
      */
-    public Client() throws IOException {
+    public Client() {
+        
+    }
+    /**
+     * Inserimento di una stringa all'interno del client
+     * @param a 
+     */
+    public void Inserimento(String a){
+        a=this.a;     
+    }
+    public void avvio() throws IOException{
         try{
             p=new Partita();
             Socket s = new Socket("127.0.0.1", 5555);
@@ -50,12 +60,5 @@ public class Client {
         }catch(java.net.SocketException e){
             System.err.println(e);
         }
-    }
-    /**
-     * Inserimento di una stringa all'interno del client
-     * @param a 
-     */
-    public void Inserimento(String a){
-        a=this.a;     
     }
 }

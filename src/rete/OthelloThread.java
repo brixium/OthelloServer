@@ -81,6 +81,13 @@ public class OthelloThread extends Thread {
                         }
                         int x=Integer.parseInt(xS);
                         int y=Integer.parseInt(yS);
+                        int u=p.getCampo().Move(x, y);
+                        if(u!=1){
+                            int k=0;
+                            while(k<20){
+                                
+                            }
+                        }
                         p.getCampo().setCasella(x, y, turno);
                         turno=!turno;
                         }else{

@@ -31,6 +31,7 @@ public class OthelloServer {
                 System.out.println("Client in avvio...");
                 contatore++;
                 Client cli = new Client();
+                cli.avvio();
             }else{
                 System.out.println("Hai sbagliato a scrivere");
             }
