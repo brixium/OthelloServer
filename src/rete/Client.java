@@ -20,7 +20,7 @@ public class Client {
      * @param a 
      */
     public void Inserimento(String a){
-        a=this.a;     
+        a=this.a;
     }
     public void avvio() throws IOException{
         try{

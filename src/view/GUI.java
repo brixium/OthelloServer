@@ -15,7 +15,7 @@ import rete.Client;
  * @author brunati.chiara
  */
 public class GUI extends javax.swing.JFrame {
-            Client cli;
+    Client cli;
        
         
    
@@ -25,8 +25,7 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() throws IOException {
         initComponents();
-        cli= new Client ();
-        cli.avvio();
+        setVisible(true);
     }
 
     /**
