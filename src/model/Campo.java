@@ -2,7 +2,9 @@ package model;
 
 public class Campo {
     Casella cs[][] = new Casella[8][8];
+    int mosse;
     public Campo(){
+        mosse=1;
         for(int r=0; r<8; r++){
             for(int c=0; c<8; c++){
             //casella  3-3
@@ -39,7 +41,7 @@ public class Campo {
     public Casella[][] getCasella(){
         return cs;
     }
-    public void setCasella(int x, int y, boolean color){
+     public void setCasella(int x, int y, boolean color){
         /*
         for(int i=0; i<8; i++){
             for(int j=0; j<8; j++){
@@ -108,5 +110,39 @@ public class Campo {
         }
     return mossa; 
     }
+    public int Move(int x, int y){
+        int b=1;
+        for(int i=0; i<8; i++){
+            for(int j=0; j<8; j++){
+                if(cs[x-1][y-1].getOccupata()){ // in basso a sx
+                    b=b*2;
+                }
+                if(cs[x][y-1].getOccupata()){   // in basso cnetrale
+                    b=b*3;
+                }
+                if(cs[x+1][y-1].getOccupata()){ // in in basso a dx
+                    b=b*5;
+                }
+                if(cs[x-1][y].getOccupata()){   // a sinistra
+                    b=b*7;
+                }
+                if(cs[x+1][y].getOccupata()){   // a destra
+                    b=b*11;
+                }
+                if(cs[x-1][y+1].getOccupata()){ // in alto a sx
+                    b=b*13;
+                }
+                if(cs[x][y+1].getOccupata()){   // in alto al centro
+                    b=b*17;
+                }
+                if(cs[x+1][y+1].getOccupata()){ // in alto a destra
+                    b=b*19;
+                }
+            }
+        }
+        mosse=b;
+        return b;
+    }
+    
 }
             

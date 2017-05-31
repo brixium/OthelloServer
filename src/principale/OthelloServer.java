@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Campo;
+import view.GUI;
 import view.TextInterface;
 /**
  * Classe principale per l'avvio del programma
@@ -28,9 +29,18 @@ public class OthelloServer {
                 System.out.println("Server in avvio...");
                 Server s = new Server();
             }else if(i.equalsIgnoreCase("client")|| i.contains("c")){
+                System.out.println("Vuoi avviare la GUI (G) o la view testuale? (T)");
+                i=br.readLine();
+                if(i.contains("g")){
+                    GUI g = new GUI();
+                }else if(i.contains("t")){
+                    Client cli = new Client();
+                    cli.avvio();
+                }else{
+                    System.out.println("Non ho capito");
+                }
                 System.out.println("Client in avvio...");
                 contatore++;
-                Client cli = new Client();
             }else{
                 System.out.println("Hai sbagliato a scrivere");
             }
