@@ -143,6 +143,4 @@ public class Campo {
         mosse=b;
         return b;
     }
-    
 }
-            

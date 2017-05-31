@@ -84,7 +84,7 @@ public class OthelloThread extends Thread {
                         int u=p.getCampo().Move(x, y);
                         int [] poss = new int[8];
                         if(u!=1){
-                            int k=0;
+                            int k=1;
                             int ind=0;
                             while(k<20){
                                 if(u%k==0){
@@ -122,7 +122,7 @@ public class OthelloThread extends Thread {
                             if(p.getCampo().PossibileMossa(x,y, false)){
                                 p.getCampo().setCasella(x, y, turno);
                             }
-                            
+
                             turno=!turno;
                             //System.out.println(":"+mossa/2+";");
                         }
