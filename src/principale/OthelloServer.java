@@ -31,9 +31,9 @@ public class OthelloServer {
             }else if(i.equalsIgnoreCase("client")|| i.contains("c")){
                 System.out.println("Vuoi avviare la GUI (G) o la view testuale? (T)");
                 i=br.readLine();
-                if(i.contains("g")){
+                if(i.contains("g")||i.contains("G")){
                     GUI g = new GUI();
-                }else if(i.contains("t")){
+                }else if(i.contains("t")||i.contains("T")){
                     Client cli = new Client();
                     cli.avvio();
                 }else{

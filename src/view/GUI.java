@@ -26,6 +26,7 @@ public class GUI extends javax.swing.JFrame {
     public GUI() throws IOException {
         initComponents();
         setVisible(true);
+        cli = new Client();
     }
 
     /**

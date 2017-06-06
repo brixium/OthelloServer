@@ -7,6 +7,8 @@ public class Client {
     Partita p;
     String a;
     String fromserver;
+    int controllo=0;
+    int caux=0;
     /**
      * Costruttore: crea client per giocare
      * All'interno c'è un ciclo infinito per l'inserimento delle mosse e la ricezone dal server
@@ -21,6 +23,33 @@ public class Client {
      */
     public void Inserimento(String a){
         a=this.a;
+        // flusso OUT secondo client
+        a=a.trim();
+        String xS="", yS="";
+        if(CheckSyntax(a)){
+            a=a.substring(1, 4);
+            System.out.println("Mossa: "+a);
+            String [] pos=a.split(",");
+
+            for(int i=0; i<pos.length; i++){
+                xS=pos[0];
+                yS=pos[1];
+                //System.out.println(pos[i]);
+            }
+        }
+        int x=Integer.parseInt(xS);
+        int y=Integer.parseInt(yS);
+        if(p.getCampo().PossibileMossa(x,y, false)){
+            p.getCampo().setCasella(x, y, color);
+            controllo++;
+        }
+    }
+    public boolean CheckSyntax(String s){
+        if(s.startsWith("(") && s.endsWith(")")){
+            return true;
+        }else{
+            return false;
+        }
     }
     public void avvio() throws IOException{
         try{
@@ -48,9 +77,13 @@ public class Client {
                     //p.
                     // fare dire al client la stringa
                     System.out.println("Fai la tua mossa!");
-                    a=std_in.readLine();
-                    sock_out.println(a);    // Manda al server quello che legge
-                    
+                    if(caux<controllo){
+                        sock_out.println(a);
+                        caux++;
+                    }else{
+                        a=std_in.readLine();
+                        sock_out.println(a);    // Manda al server quello che legge
+                    }
                     System.out.println("In attesa che il tuo avversario faccia una mossa...");
                     //std_out.println(sock_in.readLine());
                     a=sock_in.readLine();

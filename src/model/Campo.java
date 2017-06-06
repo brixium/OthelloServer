@@ -63,6 +63,11 @@ public class Campo {
                     //CONTROLLO IN BASSO A DESTRA
                     if(cs[riga][colonna].getOccupata() && cs[riga+1][colonna+1].getOccupata() && cs[riga][colonna].getPedina().getColore() != cs[riga+1][colonna+1].getPedina().getColore() && cs[riga+2][colonna+2].getOccupata()==false){
                         mossa = true;
+                        System.out.println(cs[riga][colonna].getOccupata());
+                        System.out.println(cs[riga+1][colonna+1].getOccupata());
+                        System.out.println(cs[riga][colonna].getPedina().getColore());
+                        System.out.println(cs[riga+1][colonna+1].getPedina().getColore());
+                        System.out.println(cs[riga+2][colonna+2].getOccupata());
                         if(riga+2 == r && colonna+2 == c)
                             cs[riga+2][colonna+2].setPedina(r, c, true, col);
                         else
@@ -108,7 +113,7 @@ public class Campo {
                
             }
         }
-    return mossa; 
+        return mossa; 
     }
     public int Move(int x, int y){
         int b=1;

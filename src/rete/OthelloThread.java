@@ -81,6 +81,7 @@ public class OthelloThread extends Thread {
                         }
                         int x=Integer.parseInt(xS);
                         int y=Integer.parseInt(yS);
+                        /*
                         int u=p.getCampo().Move(x, y);
                         int [] poss = new int[8];
                         if(u!=1){
@@ -97,6 +98,7 @@ public class OthelloThread extends Thread {
                                 }
                             }
                         }
+                        */
                         p.getCampo().setCasella(x, y, turno);
                         turno=!turno;
                         }else{
